@@ -18,6 +18,10 @@ angular.module('ui.knob', []).directive('knob', ['$timeout', function($timeout) 
                     $scope.$apply();
                 });
             };
+            
+            knobInit.format = function (value) { 
+              return value + '%';
+            };
 
             $scope.$watch('knobData', function(newValue, oldValue) {
                 if (newValue != oldValue) {
